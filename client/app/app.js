@@ -13,7 +13,7 @@ angular.module('videoClubApp', [
         'ngFileSaver',
         'LocalStorageModule'
     ])
-    .constant("API", "http://localhost:8080/adsi2017_1199561-master")
+    .constant("API", "http://localhost:25956/adsi2017_backend_completo")
     .config(function($urlRouterProvider, $locationProvider, $authProvider, API,localStorageServiceProvider) {
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
