@@ -9,6 +9,10 @@
             this.$state = $state;
             this.tiposDocumentosService = tiposDocumentosService;
             this.ciudadesService = ciudadesService;
+             this.selectedItem  = null;
+             this.searchText    = null;
+
+
         }
         $onInit() {
             this.departamentosService.query().$promise
@@ -48,7 +52,12 @@
                     console.log("Error al crear el usuario ", err);
                 })
         }
-
+        querySearch(dato){
+          return this.ciudadesService.getCiudades({nombre:dato}).$promise
+          .then(response => {
+            return response;
+          })
+        }
         imageLoad($fileContent) {
             this.image = $fileContent;
         }
