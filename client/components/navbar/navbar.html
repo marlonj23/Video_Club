@@ -16,10 +16,11 @@
         </li>
          <li ng-if="vm.AuthService.isAdmin()" ui-sref-active="active"><a ui-sref="usuarios-list">Usuarios</a></li>
          <li ng-if="vm.AuthService.isAdmin()" ui-sref-active="active"><a ui-sref="usuarios-create">Nuevo usuario</a></li>
-         
-        
+
+
             <li  class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Peliculas <span class="caret"></span></a>
+          <a ui-sref="vehiculos-list" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">vehiculos <span class="caret"></span></a>
           <ul class="dropdown-menu">
              <li ng-if="vm.AuthService.isAuthenticated()" ui-sref-active="active"><a ui-sref="peliculas-list">Peliculas</a></li>
              <li ng-if="vm.AuthService.isAuthenticated()" ui-sref-active="active"><a ui-sref="peliculas-create">Add Peliculas</a></li>

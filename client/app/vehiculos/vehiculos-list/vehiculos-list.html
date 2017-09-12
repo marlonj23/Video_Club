@@ -1,0 +1,28 @@
+<div>This is the vehiculos-list view.</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+        <td>  id  </td>
+        <td> Marca  </td>
+        <td>Descripcion  </td>
+        <td>valor Alquiler  </td>
+        <td>Tipo</td>
+        <td>Total con Impuesto</td>
+        <td>Total con descuento del 20%</td>
+
+    </tr>
+  </thead>
+  <body>
+    <tr ng-repeat="item in vm.vehiculos">
+      <td>{{item.id}}</td>
+      <td>{{item.marca}}  </td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.valorAlquiler}}</td>
+      <td>{{item.tipo}}</td>
+      <td>{{item.impuesto}}</td>
+      <td>{{item.descuento}}</td>
+    </tr>
+  </body>
+</table>
